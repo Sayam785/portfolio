@@ -2,296 +2,201 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sayam Bahuguna - E-Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayam Bahuguna - Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
+      background-color: #f4f4f9;
       color: #333;
     }
     header {
-      background: #222;
+      background: #2c3e50;
       color: #fff;
-      padding: 1rem;
+      padding: 20px 0;
       text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
+      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      padding: 14px 20px;
       text-decoration: none;
+      display: block;
     }
     nav a:hover {
-      color: #1abc9c;
+      background: #1abc9c;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     h2 {
-      border-bottom: 2px solid #222;
-      display: inline-block;
-      padding-bottom: 5px;
+      color: #2c3e50;
     }
-    img, video {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 10px 0;
+    .about-photo {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    .clear {
+      clear: both;
     }
     footer {
       text-align: center;
-      background: #222;
+      padding: 15px;
+      background: #2c3e50;
       color: #fff;
-      padding: 1rem;
       margin-top: 20px;
     }
     .placeholder {
-      background: #ddd;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      border-radius: 10px;
+      text-align: center;
+      padding: 40px;
+      background: #ecf0f1;
+      border: 2px dashed #bdc3c7;
+      color: #7f8c8d;
+      font-size: 14px;
     }
-    /* About photo */
-    .about-photo {
-      float: left;
-      width: 150px;
-      height: 200px;
-      object-fit: cover;
-      margin-right: 20px;
-      border-radius: 6px;
-      border: 2px solid #333;
+    ul {
+      line-height: 1.8;
     }
-    ul { list-style-type: square; margin-left: 20px; }
-
-    /* Project Cards */
-    .project {
-      background: #fff;
-      padding: 16px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .project h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-    .tech {
-      margin: 8px 0 0 0;
-      font-style: italic;
-    }
-    .links {
-      margin-top: 10px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .links a {
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 1px solid #004080;
-      color: #004080;
-      background: #f0f6ff;
-    }
-    .links a:hover {
-      background: #e6f0ff;
-    }
-    .clear { clear: both; }
   </style>
 </head>
 <body>
-  <!-- ================== HEADER ================== -->
   <header>
     <h1>Sayam Bahuguna</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#summary">Profile Summary</a>
-      <a href="#projects">Projects</a>
-      <a href="#courses">Courses & Certificates</a>
-      <a href="#skills">Skills & Strengths</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>B.Tech CSE Student | Aspiring Developer</p>
   </header>
 
-  <!-- ================== ABOUT ================== -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#summary">Profile Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <img src="profile.jpg" alt="Sayam Bahuguna" class="about-photo" />
     <p>
-      I’m <b>Sayam Bahuguna</b>, currently pursuing <b>B.Tech in Computer Science and Engineering</b>.
-      I am passionate about coding, technology, and learning new tools that improve problem-solving.
-      I have been working on projects related to <b>web development, C programming, and databases</b>,
-      and I am excited to keep building my portfolio. In the future, I aim to specialize in <b>AI/ML</b>
-      and contribute to impactful tech solutions.
+      I’m <b>Sayam Bahuguna</b>, currently pursuing <b>B.Tech in Computer Science and Engineering</b> 
+      at Graphic Era Hill University, Dehradun.  
+      I am passionate about <b>coding, problem-solving, and building practical projects</b>.  
+      I love learning new tools that improve my technical skills and preparing myself for real-world challenges.
     </p>
     <p>
-      Outside academics, I love sports like <b>cricket and basketball</b>, which help me build leadership,
-      teamwork, and discipline. My journey is just beginning, but I’m confident in combining technical
-      knowledge with creativity for success.
+      My journey so far has included working on <b>C programming, web development, databases</b>, 
+      and <b>IoT hackathon projects</b>.  
+      These experiences have helped me build confidence, teamwork, and logical thinking skills.
     </p>
     <div class="clear"></div>
   </section>
 
-  <!-- ================== SUMMARY ================== -->
+  <!-- Profile Summary -->
   <section id="summary">
     <h2>Profile Summary</h2>
     <p>
-      I am a <b>CSE student</b> with a growing interest in coding, software development, and new technologies.
-      Currently learning <b>C, C++, and Python</b>, while also exploring <b>web development</b>.
-      I enjoy working on projects that enhance my practical knowledge and prepare me for a career in
-      <b>software engineering</b>.
+      As a Computer Science student, I am continuously learning the foundations of programming and software development.  
+      I am building a strong base in <b>C, C++, and Python</b>, while exploring <b>HTML, CSS, and JavaScript</b> for web development.  
+      I believe in <b>learning by doing</b>, so I try to create projects that not only improve my coding skills 
+      but also have some real-world application.
+    </p>
+    <p>
+      My goal is to keep improving step by step and prepare myself for <b>internships and future career opportunities</b> in software engineering.  
+      I enjoy solving problems, whether it’s through coding challenges or developing simple projects that automate tasks.
     </p>
   </section>
 
-  <!-- ================== PROJECTS ================== -->
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><b>Programming Languages:</b> C, C++ (Basics), Python (Basics)</li>
+      <li><b>Web Development:</b> HTML, CSS, JavaScript</li>
+      <li><b>Database:</b> MySQL (Basics)</li>
+      <li><b>Core Strengths:</b> Problem-Solving, Logical Thinking, Team Collaboration</li>
+      <li><b>Other Tools:</b> GitHub for version control</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-
-    <!-- Project 1 -->
-    <div class="project">
-      <h3>University Time Table Management System</h3>
-      <p>
-        This project is developed to <b>automate and optimize the scheduling of classes, faculty, and classrooms</b>.
-        Traditionally, timetable creation is handled manually, which is time-consuming and prone to conflicts such as overlapping classes, unavailable faculty, or overbooked classrooms. 
-        The system addresses these issues by providing a structured software solution that enhances accuracy, saves time, and simplifies management.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
-      <p><b>Key Features:</b></p>
-      <ul>
-        <li>Automatic timetable generation</li>
-        <li>Faculty and classroom allocation</li>
-        <li>Student & staff access for easy viewing and updates</li>
-      </ul>
-      <p><b>Modules Included:</b></p>
-      <ul>
-        <li>Input Module – collects faculty, classrooms, courses, and time slots</li>
-        <li>Validation Module – ensures correctness and prevents clashes</li>
-        <li>Scheduling Module – assigns courses to rooms and faculty</li>
-        <li>View Module – displays timetable in readable format</li>
-        <li>Update Module – allows modifications to existing entries</li>
-        <li>File Handling Module – manages saving/loading data</li>
-        <li>Report Generation Module – prepares daily/faculty-wise schedules</li>
-        <li>Main Control Module – manages menu navigation</li>
-      </ul>
-      <div class="links">
-        <a href="PBLPPT.pptx" target="_blank">📂 View PPT</a>
-        <a href="github-or-drive-link-1" target="_blank">💻 GitHub/Drive Link</a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-      <h3>Parking Management System</h3>
-      <p>
-        A C-based project designed to manage parking slots efficiently. It helps users book, track, and manage
-        parking spaces, ensuring proper utilization.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
-      <p><b>Key Features:</b></p>
-      <ul>
-        <li>Vehicle entry/exit management</li>
-        <li>Parking slot availability tracking</li>
-        <li>Billing system for parked vehicles</li>
-      </ul>
-      <div class="links">
-        <a href="SmartCampus_IoT.pptx" target="_blank">📂 View PPT</a>
-        <a href="github-or-drive-link-2" target="_blank">💻 GitHub/Drive Link</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== COURSES ================== -->
-  <section id="courses">
-    <h2>Courses & Certificates</h2>
     <ul>
-      <li>📜 Certificate of Participation in <b>Hacktholic Event</b> for showcasing problem-solving and coding skills.</li>
-      <li>🏆 Certificate of Achievement in <b>Accolade Chapter 3</b> for active participation and technical excellence.</li>
-      <li>💡 Workshop on <b>Python Programming</b> – learned fundamentals of scripting and automation.</li>
-      <li>🌐 Course on <b>Web Development Basics</b> (HTML, CSS, JS).</li>
-    </ul>
-    <div class="gallery">
-      <img src="hacktholic-certificate.jpg" alt="Hacktholic Certificate" />
-      <img src="accolade-certificate.jpg" alt="Accolade Certificate" />
-      <img src="python-course.jpg" alt="Python Workshop" />
-      <img src="web-course.jpg" alt="Web Dev Course" />
-    </div>
-  </section>
+      <li>
+        <b>University Time-table Management System (C)</b>  
+        <p>A project developed in C language that automates timetable creation.  
+        Features include input validation, conflict detection, and structured display of schedules.  
+        This project improved my understanding of <b>file handling, arrays, and modular programming</b> in C.</p>
+      </li>
 
-  <!-- ================== SKILLS ================== -->
-  <section id="skills">
-    <h2>Skills & Strengths</h2>
-    <h3>Technical Skills:</h3>
-    <ul>
-      <li><b>Programming Languages:</b> C, C++, Python</li>
-      <li><b>Core Concepts:</b> Data Structures &amp; Algorithms, OOP, DBMS</li>
-      <li><b>Development:</b> Web Development (HTML, CSS, JavaScript)</li>
-      <li><b>Tools & Platforms:</b> Git/GitHub, MS Office</li>
-    </ul>
-    <h3>Strengths:</h3>
-    <ul>
-      <li>Strong problem-solving and analytical thinking</li>
-      <li>Quick learner with curiosity for new technologies</li>
-      <li>Effective communication and presentation skills</li>
-      <li>Teamwork and leadership qualities</li>
-      <li>Discipline, perseverance, adaptability</li>
+      <li>
+        <b>Smart Parking System (IoT Project)</b>  
+        <p>Hackathon project where we used <b>IR sensors and microcontrollers</b> to detect empty parking slots.  
+        It displayed available slots to users and reduced confusion in parking areas.  
+        I contributed in <b>logic design and code debugging</b>.</p>
+      </li>
+
+      <li>
+        <b>Smart Classroom IoT System</b>  
+        <p>Developed during a hackathon as a team project.  
+        Features included <b>automatic attendance, light and fan control using sensors</b>, and resource monitoring.  
+        This project gave me exposure to <b>IoT concepts and teamwork</b>.</p>
+      </li>
+
+      <li>
+        <b>Portfolio Website</b>  
+        <p>A personal portfolio website built using <b>HTML and CSS</b>.  
+        It highlights my projects, skills, and achievements in a clean, responsive design.  
+        Through this project, I practiced <b>UI design, structuring content, and styling</b>.</p>
+      </li>
+
+      <li>
+        <b>Mini C Programs Collection</b>  
+        <p>A set of small programs written in C, such as <b>calculator, matrix operations, string handling</b>, 
+        and simple data structures like <b>stacks and queues</b>.  
+        This practice improved my problem-solving ability and logic building in programming.</p>
+      </li>
     </ul>
   </section>
 
-  <!-- ================== ACHIEVEMENTS ================== -->
-  <section id="achievements">
-    <h2>Achievements</h2>
+  <!-- Hobbies Section -->
+  <section id="hobbies">
+    <h2>Hobbies & Interests</h2>
     <ul>
-      <li>🏆 Participated in <b>Hack-o-holic 3.0</b> with project "SmartCampus IoT System".</li>
-      <li>🥇 Represented college basketball team in inter-university tournaments.</li>
-      <li>🎯 Consistently ranked in top 5% in coding assignments.</li>
-      <li>📚 Published small research work in college technical magazine.</li>
+      <li>Coding and exploring new programming problems</li>
+      <li>Playing <b>Chess</b> – helps me improve strategy and logical thinking</li>
+      <li>Fitness and Gym – maintaining discipline and health</li>
+      <li>Learning about new technologies through articles and videos</li>
     </ul>
   </section>
 
-  <!-- ================== GALLERY ================== -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="gallery1.jpg" alt="Basketball Team" />
-      <img src="gallery2.jpg" alt="Hackathon Participation" />
-      <img src="gallery3.jpg" alt="Cricket Team Celebration" />
-      <img src="gallery4.jpg" alt="College Building" />
-      <img src="gallery5.jpg" alt="Lab Work" />
-      <img src="gallery6.jpg" alt="Coding Session" />
-    </div>
-  </section>
-
-  <!-- ================== CONTACT ================== -->
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:sayambahujuna@gmail.com">sayambahujuna@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340" target="_blank">
-      linkedin.com/in/sayam-bahuguna</a></p>
+    <p>Email: <a href="mailto:sayam785@gmail.com">sayam785@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/sayam785" target="_blank">github.com/sayam785</a></p>
+    <p>Portfolio: <a href="https://sayam785.github.io/portfolio" target="_blank">sayam785.github.io/portfolio</a></p>
   </section>
 
-  <!-- ================== FOOTER ================== -->
   <footer>
-    <p>© 2025 Sayam Bahuguna</p>
+    <p>© 2025 Sayam Bahuguna | Portfolio</p>
   </footer>
 </body>
 </html>
