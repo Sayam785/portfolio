@@ -81,9 +81,7 @@
     nav a:hover{background:#ffffff22}
 
     /* Sections */
-    section{
-      padding:38px 0;
-    }
+    section{padding:38px 0;}
     h2.section-title{
       margin:0 0 18px 0;
       font-size:1.6rem;
@@ -97,11 +95,7 @@
       padding:18px;
       box-shadow:var(--shadow);
     }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:18px;
-    }
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
     .col-12{grid-column:span 12}
     .col-6{grid-column:span 6}
     .col-4{grid-column:span 4}
@@ -127,75 +121,46 @@
       border:2px solid var(--ring); box-shadow:0 8px 22px rgba(31,42,68,.15);
     }
     .taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .tag{
-      font-size:.85rem; padding:6px 10px; border-radius:999px;
-      background:#eef4ff; color:#21408a; border:1px solid #dfe7ff;
-    }
+    .tag{font-size:.85rem;padding:6px 10px;border-radius:999px;background:#eef4ff;color:#21408a;border:1px solid #dfe7ff}
 
     /* Project cards */
-    .project{
-      display:flex; flex-direction:column; gap:10px;
-      border-left:5px solid var(--brand);
-    }
+    .project{display:flex;flex-direction:column;gap:10px;border-left:5px solid var(--brand)}
     .project h3{margin:0}
     .meta{color:var(--muted);font-size:.92rem}
-    .pill{
-      display:inline-block; font-size:.82rem; padding:4px 10px; border-radius:999px;
-      background:#f1f5ff; border:1px solid #e2e8ff; color:#23408a; margin-right:6px;
-    }
-    .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px}
-    .btn{
-      text-decoration:none; font-weight:700; font-size:.92rem;
-      padding:8px 12px; border-radius:10px; border:1px solid var(--brand);
-      color:var(--brand); background:#fff;
-      transition:.2s;
-    }
-    .btn.fill{background:var(--brand); color:#fff}
-    .btn:hover{transform:translateY(-1px); box-shadow:0 6px 16px rgba(10,89,255,.2)}
+    .pill{display:inline-block;font-size:.82rem;padding:4px 10px;border-radius:999px;background:#f1f5ff;border:1px solid #e2e8ff;color:#23408a;margin-right:6px}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .btn{text-decoration:none;font-weight:700;font-size:.92rem;padding:8px 12px;border-radius:10px;border:1px solid var(--brand);color:var(--brand);background:#fff;transition:.2s}
+    .btn.fill{background:var(--brand);color:#fff}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(10,89,255,.2)}
 
     /* Media tiles (certificates/gallery) */
-    .thumb{
-      width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px;
-      border:1px solid #e6ecff; box-shadow:0 8px 18px rgba(31,42,68,.06);
-      transition:.25s;
-    }
+    .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid #e6ecff;box-shadow:0 8px 18px rgba(31,42,68,.06);transition:.25s}
     .thumb:hover{transform:scale(1.015)}
     figure{margin:0}
-    figcaption{
-      font-size:.9rem; color:var(--muted); margin-top:6px; text-align:center;
-    }
+    figcaption{font-size:.9rem;color:var(--muted);margin-top:6px;text-align:center}
 
     /* Definition lists */
-    dl{display:grid; grid-template-columns:160px 1fr; gap:10px 16px}
+    dl{display:grid;grid-template-columns:160px 1fr;gap:10px 16px}
     dt{color:var(--muted)}
     dd{margin:0}
 
     /* Footer */
-    footer{
-      margin-top:30px; padding:28px 14px; text-align:center;
-      color:var(--muted);
-    }
-    .contact a{color:var(--brand); text-decoration:none; font-weight:700}
+    footer{margin-top:30px;padding:28px 14px;text-align:center;color:var(--muted)}
+    .contact a{color:var(--brand);text-decoration:none;font-weight:700}
     .contact a:hover{text-decoration:underline}
 
-    /* Helpers */
     .muted{color:var(--muted)}
     .spacer{height:10px}
-    .note{
-      font-size:.9rem; color:#305; background:#f7f3ff; border:1px dashed #c9b9ff;
-      padding:10px 12px; border-radius:10px;
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- =================  HEADER (NO VIDEO SECTION)  ================= -->
+  <!-- =================  HEADER  ================= -->
   <header>
     <div class="wrap">
       <div class="topbar">
         <div class="id">
-          <!-- uses your repo file: profile.jpg -->
           <img class="avatar" src="profile.jpg" alt="Sayam Bahuguna profile photo">
           <div class="name">
             <h1>Sayam Bahuguna</h1>
@@ -211,7 +176,6 @@
           <a href="#ppts">Presentations</a>
           <a href="#skills">Skills</a>
           <a href="#achievements">Achievements</a>
-          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -224,9 +188,7 @@
       <h2 class="section-title">About Me</h2>
 
       <div class="card about">
-        <!-- uses the same profile.jpg in a portrait slot -->
         <img class="photo" src="profile.jpg" alt="Portrait of Sayam Bahuguna">
-
         <div>
           <p>
             I’m <strong>Sayam Bahuguna</strong>, a Computer Science & Engineering undergrad who enjoys
@@ -234,12 +196,10 @@
             project work, certificates, and presentation decks in one place. I like keeping things
             minimal, readable, and honest—no fluff.
           </p>
-
           <p class="muted">
             Interests: problem-solving with C/C++, learning Python basics, and building web pages with
             HTML/CSS. I also enjoy chess—it keeps the brain sharp.
           </p>
-
           <div class="taglist" aria-label="Interests and tools">
             <span class="tag">C</span>
             <span class="tag">C++</span>
@@ -249,25 +209,14 @@
             <span class="tag">Git/GitHub</span>
             <span class="tag">PPT Documentation</span>
           </div>
-
           <div class="spacer"></div>
-
           <dl>
-            <dt>Based in</dt>
-            <dd>Dehradun, Uttarakhand, India</dd>
-
-            <dt>Focus areas</dt>
-            <dd>Data Structures, basic DB/file handling, and clean documentation</dd>
-
-            <dt>Looking towards</dt>
-            <dd>Solid CS fundamentals, then AI/ML foundations later on</dd>
+            <dt>Based in</dt><dd>Dehradun, Uttarakhand, India</dd>
+            <dt>Focus areas</dt><dd>Data Structures, basic DB/file handling, and clean documentation</dd>
+            <dt>Looking towards</dt><dd>Solid CS fundamentals, then AI/ML foundations later on</dd>
           </dl>
         </div>
       </div>
-
-      <p class="note" role="note">
-        NOTE: This page intentionally does not include any “Self-Introduction Video” section.
-      </p>
     </div>
   </section>
 
@@ -275,7 +224,6 @@
   <section id="summary">
     <div class="wrap">
       <h2 class="section-title">Profile Summary</h2>
-
       <div class="card">
         <ul>
           <li>B.Tech CSE student with a growing interest in software development and clear technical communication.</li>
@@ -292,53 +240,32 @@
   <section id="projects">
     <div class="wrap">
       <h2 class="section-title">Projects</h2>
-
       <div class="grid">
-        <!-- Project 1 -->
         <div class="col-12">
           <article class="card project">
             <h3>University Timetable Management (C)</h3>
             <p class="meta">Console program • C, File Handling</p>
-
             <p>
               A straightforward C program that helps generate and view class timetables. It stores inputs
               (courses, faculty, rooms, time slots) in files, checks for basic clashes, and prints readable
               views (day-wise or faculty-wise). The focus was on clear menus, input validation, and keeping
-              the code modular for each step (input, validate, schedule, view, update).
+              the code modular.
             </p>
-
-            <ul>
-              <li>Modules: Input, Validation, Scheduling, View/Report, Update, File I/O, Main Menu.</li>
-              <li>Outputs: human-readable table prints; faculty/day wise reports.</li>
-              <li>Data storage: basic flat files with simple formats for quick loading/saving.</li>
-            </ul>
-
             <div class="links">
-              <!-- Your deck file in repo -->
               <a class="btn fill" href="PBLPPT.pptx" download>Download PPT (PBLPPT.pptx)</a>
             </div>
           </article>
         </div>
-
-        <!-- Project 2 -->
         <div class="col-12">
           <article class="card project">
             <h3>Parking Management (C)</h3>
             <p class="meta">Console program • C, File Handling</p>
-
             <p>
-              A small file-based project to manage parking slots. It notes vehicle entry/exit, tracks free
-              slots, and prints basic bills based on duration. The point was to practice simple record
-              storage and retrieval with file streams and keep the code easy to navigate.
+              A file-based project to manage parking slots. It notes vehicle entry/exit, tracks free
+              slots, and prints bills based on duration. Built to practice record storage and retrieval
+              with file streams and keep the code easy to navigate.
             </p>
-
-            <ul>
-              <li>Features: entry/exit logs, availability, simple billing.</li>
-              <li>Emphasis on: structured menus, safe input, and persistent storage.</li>
-            </ul>
-
             <div class="links">
-              <!-- Your deck file in repo -->
               <a class="btn fill" href="SmartCampus_IoT.pptx" download>Download PPT (SmartCampus_IoT.pptx)</a>
             </div>
           </article>
@@ -351,33 +278,17 @@
   <section id="certs">
     <div class="wrap">
       <h2 class="section-title">Courses & Certificates</h2>
-
       <div class="grid">
-        <!-- Accolade -->
         <div class="col-6">
           <figure class="card">
-            <!-- exact repo file name: accolade-certificate.jpg -->
-            <a href="accolade-certificate.jpg" target="_blank" rel="noopener">
-              <img class="thumb" src="accolade-certificate.jpg" alt="Accolade Certificate (full view on click)">
-            </a>
+            <a href="accolade-certificate.jpg" target="_blank"><img class="thumb" src="accolade-certificate.jpg" alt="Accolade Certificate"></a>
             <figcaption>Accolade certificate — participation & recognition.</figcaption>
-            <div class="links" style="justify-content:center">
-              <a class="btn" href="accolade-certificate.jpg" download>Download Image</a>
-            </div>
           </figure>
         </div>
-
-        <!-- Hacktholic -->
         <div class="col-6">
           <figure class="card">
-            <!-- exact repo file name: hacktholic-certificate.jpg -->
-            <a href="hacktholic-certificate.jpg" target="_blank" rel="noopener">
-              <img class="thumb" src="hacktholic-certificate.jpg" alt="Hacktholic Certificate (full view on click)">
-            </a>
-            <figcaption>Hacktholic participation — hands-on teamwork and problem solving.</figcaption>
-            <div class="links" style="justify-content:center">
-              <a class="btn" href="hacktholic-certificate.jpg" download>Download Image</a>
-            </div>
+            <a href="hacktholic-certificate.jpg" target="_blank"><img class="thumb" src="hacktholic-certificate.jpg" alt="Hacktholic Certificate"></a>
+            <figcaption>Hacktholic participation — teamwork and problem solving.</figcaption>
           </figure>
         </div>
       </div>
@@ -388,46 +299,28 @@
   <section id="ppts">
     <div class="wrap">
       <h2 class="section-title">Project Presentations (PPT)</h2>
-
       <div class="grid">
-        <!-- Timetable deck -->
         <div class="col-6">
           <div class="card">
-            <h3 style="margin-top:0">PBL Timetable Deck</h3>
-            <p class="muted">Slide deck summarizing modules, data flow, and sample outputs.</p>
-            <dl>
-              <dt>File</dt><dd>PBLPPT.pptx</dd>
-              <dt>Type</dt><dd>PowerPoint</dd>
-            </dl>
+            <h3>PBL Timetable Deck</h3>
+            <p class="muted">Slides summarizing modules and outputs.</p>
             <div class="links">
-              <!-- On GitHub Pages, direct preview of .pptx in iframe is unreliable, so provide open + download -->
               <a class="btn fill" href="PBLPPT.pptx" download>Download</a>
-              <a class="btn" href="PBLPPT.pptx" target="_blank" rel="noopener">Open in new tab</a>
+              <a class="btn" href="PBLPPT.pptx" target="_blank">Open</a>
             </div>
           </div>
         </div>
-
-        <!-- SmartCampus deck -->
         <div class="col-6">
           <div class="card">
-            <h3 style="margin-top:0">SmartCampus IoT Deck</h3>
-            <p class="muted">Slides covering idea, modules, and demonstration plan.</p>
-            <dl>
-              <dt>File</dt><dd>SmartCampus_IoT.pptx</dd>
-              <dt>Type</dt><dd>PowerPoint</dd>
-            </dl>
+            <h3>SmartCampus IoT Deck</h3>
+            <p class="muted">Slides covering idea and modules.</p>
             <div class="links">
               <a class="btn fill" href="SmartCampus_IoT.pptx" download>Download</a>
-              <a class="btn" href="SmartCampus_IoT.pptx" target="_blank" rel="noopener">Open in new tab</a>
+              <a class="btn" href="SmartCampus_IoT.pptx" target="_blank">Open</a>
             </div>
           </div>
         </div>
       </div>
-
-      <p class="note">
-        Tip: Some browsers don’t preview <code>.pptx</code> inline. Use <strong>Open in new tab</strong> or
-        <strong>Download</strong> to view the slides locally.
-      </p>
     </div>
   </section>
 
@@ -435,18 +328,13 @@
   <section id="skills">
     <div class="wrap">
       <h2 class="section-title">Skills & Strengths</h2>
-
       <div class="card">
-        <p>
-          I focus on writing clear, small programs and documenting them well. Current tools & areas:
-        </p>
-
         <ul>
-          <li><strong>Programming:</strong> C (file I/O, modular design), C++ basics, Python basics</li>
-          <li><strong>Concepts:</strong> Data structures (arrays, lists, stacks/queues), simple validation, reports</li>
-          <li><strong>Web:</strong> HTML &amp; CSS for clean static pages</li>
+          <li><strong>Programming:</strong> C (file I/O), C++ basics, Python basics</li>
+          <li><strong>Concepts:</strong> Data structures (arrays, lists, stacks/queues)</li>
+          <li><strong>Web:</strong> HTML & CSS static pages</li>
           <li><strong>Tools:</strong> Git/GitHub, VS Code, PowerPoint</li>
-          <li><strong>Strengths:</strong> consistency, teamwork, clarity in communication, willingness to iterate</li>
+          <li><strong>Strengths:</strong> teamwork, communication, punctuality</li>
         </ul>
       </div>
     </div>
@@ -456,50 +344,12 @@
   <section id="achievements">
     <div class="wrap">
       <h2 class="section-title">Achievements</h2>
-
       <div class="card">
         <ul>
-          <li>Built two C projects that use real file handling and menus (Timetable, Parking).</li>
-          <li>Presented work using structured PPTs for clear evaluation and sharing.</li>
-          <li>Participated in Hacktholic; practiced teamwork, deadlines, and demo preparation.</li>
+          <li>Built two C projects with file handling (Timetable, Parking).</li>
+          <li>Presented structured PPTs for evaluation.</li>
+          <li>Participated in Hacktholic hackathon, practiced teamwork.</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================  GALLERY  ================= -->
-  <section id="gallery">
-    <div class="wrap">
-      <h2 class="section-title">Gallery</h2>
-
-      <div class="grid">
-        <!-- Reuse existing files to avoid blanks; click to view full -->
-        <div class="col-4">
-          <figure class="card">
-            <a href="profile.jpg" target="_blank" rel="noopener">
-              <img class="thumb" src="profile.jpg" alt="Profile photo">
-            </a>
-            <figcaption>Profile</figcaption>
-          </figure>
-        </div>
-
-        <div class="col-4">
-          <figure class="card">
-            <a href="accolade-certificate.jpg" target="_blank" rel="noopener">
-              <img class="thumb" src="accolade-certificate.jpg" alt="Accolade certificate">
-            </a>
-            <figcaption>Accolade</figcaption>
-          </figure>
-        </div>
-
-        <div class="col-4">
-          <figure class="card">
-            <a href="hacktholic-certificate.jpg" target="_blank" rel="noopener">
-              <img class="thumb" src="hacktholic-certificate.jpg" alt="Hacktholic certificate">
-            </a>
-            <figcaption>Hacktholic</figcaption>
-          </figure>
-        </div>
       </div>
     </div>
   </section>
@@ -508,29 +358,17 @@
   <section id="contact">
     <div class="wrap">
       <h2 class="section-title">Contact</h2>
-
       <div class="card contact">
-        <p>
-          Email:
-          <a href="mailto:sayambahujuna@gmail.com">sayambahujuna@gmail.com</a>
-        </p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-             target="_blank" rel="noopener">
-            linkedin.com/in/sayam-bahuguna-a56a87340
-          </a>
-        </p>
+        <p>Email: <a href="mailto:sayambahujuna@gmail.com">sayambahujuna@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340" target="_blank">Sayam Bahuguna</a></p>
       </div>
     </div>
   </section>
 
   <!-- =================  FOOTER  ================= -->
   <footer>
-    <div class="wrap">
-      <p>© 2025 Sayam Bahuguna • E-Portfolio</p>
-      <p class="muted">This site shows real files from the repository: profile.jpg, accolade-certificate.jpg, hacktholic-certificate.jpg, PBLPPT.pptx, SmartCampus_IoT.pptx.</p>
-    </div>
+    <p>© 2025 Sayam Bahuguna</p>
   </footer>
+
 </body>
 </html>
