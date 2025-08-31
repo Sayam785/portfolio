@@ -1,123 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sayam Bahuguna - E-Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayam Bahuguna - Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background: #f9f9f9;
+      background-color: #f4f4f9;
       color: #333;
     }
     header {
-      background: #222;
+      background: #2c3e50;
       color: #fff;
-      padding: 1rem;
+      padding: 20px 0;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
-      padding: 2rem;
+      padding: 20px;
+      margin: 20px auto;
       max-width: 1000px;
-      margin: auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     h2 {
-      border-bottom: 2px solid #222;
-      display: inline-block;
+      color: #2c3e50;
+      border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
+      margin-bottom: 15px;
     }
-    img, video {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 10px 0;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
     }
     .gallery img {
-      width: 100%;
+      width: 200px;
+      margin: 10px;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     footer {
-      text-align: center;
-      background: #222;
+      background: #2c3e50;
       color: #fff;
-      padding: 1rem;
+      text-align: center;
+      padding: 15px;
       margin-top: 20px;
     }
-    .placeholder {
-      background: #ddd;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      border-radius: 10px;
-    }
-    .about-photo {
-      float: left;
-      width: 150px;
-      height: 200px;
-      object-fit: cover;
-      margin-right: 20px;
-      border-radius: 6px;
-      border: 2px solid #333;
-    }
-    ul { list-style-type: square; margin-left: 20px; }
-
-    .project {
-      background: #fff;
-      padding: 16px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .project h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-    .tech {
-      margin: 8px 0 0 0;
-      font-style: italic;
-    }
-    .links {
-      margin-top: 10px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .links a {
+    footer a {
+      color: #1abc9c;
+      margin: 0 5px;
       text-decoration: none;
-      font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 1px solid #004080;
-      color: #004080;
-      background: #f0f6ff;
     }
-    .links a:hover {
-      background: #e6f0ff;
-    }
-    .clear { clear: both; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Sayam Bahuguna</h1>
     <nav>
       <a href="#about">About</a>
-      <a href="#video">Introduction</a>
       <a href="#summary">Profile Summary</a>
       <a href="#projects">Projects</a>
       <a href="#courses">Courses & Certificates</a>
@@ -131,119 +91,68 @@
   <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
-    <img src="profile.jpg" alt="Sayam Bahuguna" class="about-photo" />
     <p>
-      I’m <b>Sayam Bahuguna</b>, currently pursuing <b>B.Tech in Computer Science and Engineering</b>.
-      I am passionate about coding, technology, and solving real-world problems with innovative solutions.
-      I’ve worked on <b>C programming projects, IoT-based solutions, and web development</b>.
-      In the future, I aim to specialize in <b>AI/ML</b> and contribute to impactful technology.
+      Hello, I am <strong>Sayam Bahuguna</strong>, a Computer Science Engineering student at Graphic Era Hill University, Dehradun.
+      Passionate about technology, software development, and problem solving.  
+      I enjoy learning programming, building innovative projects, and exploring new tools that solve real-life problems.  
+      Outside academics, I enjoy playing <strong>chess</strong> and working on fitness at the gym.
     </p>
-    <div class="clear"></div>
-  </section>
-
-  <!-- Self Introduction Video -->
-  <section id="video">
-    <h2>Self Introduction Video</h2>
-    <div class="placeholder">[Upload Your Video Here]</div>
   </section>
 
   <!-- Profile Summary -->
   <section id="summary">
     <h2>Profile Summary</h2>
-    <p>
-      I am a <b>CSE student</b> with a growing interest in <b>software development, IoT, and programming</b>.
-      I’ve developed practical projects in <b>C language</b>, participated in <b>hackathons</b>,
-      and worked on <b>problem-solving systems</b> such as timetable and parking management.
-      I enjoy learning continuously and applying concepts in real-life scenarios.
-    </p>
+    <ul>
+      <li>Second-year B.Tech CSE student with a focus on software development and IoT solutions.</li>
+      <li>Hands-on experience in C, C++, Python (basics), and web development (HTML, CSS).</li>
+      <li>Collaborated in hackathons and team projects like SmartCampus IoT System.</li>
+      <li>Keen interest in Data Structures, Algorithms, and exploring AI/ML in future.</li>
+    </ul>
   </section>
 
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-
-    <!-- Project 1 -->
-    <div class="project">
-      <h3>University Time Table Management System</h3>
-      <p>
-        A C-based project developed to <b>automate scheduling of classes, faculty, and classrooms</b>.
-        It reduces human error, saves time, and ensures conflict-free timetables.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
-      <ul>
-        <li>Automatic timetable generation</li>
-        <li>Faculty & classroom allocation</li>
-        <li>Validation and clash prevention</li>
-        <li>File handling for data storage</li>
-      </ul>
-      <div class="links">
-        <a href="PBLPPT.pptx" target="_blank">📂 View PPT</a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-      <h3>Parking Management System</h3>
-      <p>
-        A project designed in C to manage <b>vehicle entries, exits, and parking slots</b>.
-        It includes slot tracking and billing for parked vehicles.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
-      <ul>
-        <li>Vehicle entry/exit system</li>
-        <li>Parking slot availability tracking</li>
-        <li>Simple billing system</li>
-      </ul>
-      <div class="links">
-        <a href="SmartCampus_IoT.pptx" target="_blank">📂 View PPT</a>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project">
-      <h3>SmartCampus IoT System (Hackathon Project)</h3>
-      <p>
-        Participated in <b>Hack-o-holic 3.0</b> hackathon with a project integrating IoT devices
-        for <b>smart campus monitoring</b>. Focused on classroom energy usage, security, and student facilities.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> IoT Sensors, Microcontrollers, Web Dashboard</p>
-      <ul>
-        <li>Real-time sensor data collection</li>
-        <li>Energy and classroom monitoring</li>
-        <li>Prototype demonstrated at hackathon</li>
-      </ul>
-    </div>
+    <ul>
+      <li><strong>SmartCampus IoT System</strong> (Hack-o-holic 3.0 Project)  
+        Designed an IoT-enabled system to automate attendance, energy monitoring, and smart classroom facilities.  
+        Worked with a team to integrate IoT sensors and create a central monitoring dashboard.
+      </li>
+      <li><strong>Timetable Management System (C Project)</strong>  
+        Developed a C-based program for managing class timetables with modules for adding, editing, and displaying schedules.
+      </li>
+      <li><strong>Personal Portfolio Website</strong>  
+        Built this responsive portfolio website using HTML and CSS to showcase my skills, projects, and achievements.
+      </li>
+    </ul>
   </section>
 
-  <!-- Courses and Certificates -->
+  <!-- Courses & Certificates -->
   <section id="courses">
     <h2>Courses & Certificates</h2>
     <ul>
-      <li>🏅 Certificate of Participation in <b>Hack-o-holic Hackathon</b></li>
-      <li>🏅 Certificate of Achievement in <b>Accolade Chapter 3</b></li>
+      <li>Completed certification in <strong>C Programming</strong>.</li>
+      <li>Participated in workshops on <strong>IoT and Web Development</strong>.</li>
+      <li>Certified in <strong>Effective Communication</strong> (Professional Communication course).</li>
+      <li>Additional certificates in seminars, hackathons, and technical fests.</li>
+      <li><strong>PPTs Prepared:</strong>  
+        <ul>
+          <li>Improving College Wi-Fi Infrastructure (Advanced Communication Course)</li>
+          <li>Environmental Science Project (Sustainability Focus)</li>
+        </ul>
+      </li>
     </ul>
-    <div class="gallery">
-      <img src="hacktholic-certificate.jpg" alt="Hackathon Certificate" />
-      <img src="accolade-certificate.jpg" alt="Accolade Certificate" />
-    </div>
   </section>
 
   <!-- Skills & Strengths -->
   <section id="skills">
     <h2>Skills & Strengths</h2>
-    <h3>Technical Skills:</h3>
     <ul>
-      <li><b>Programming:</b> C, C++, Python (Basics)</li>
-      <li><b>Web Development:</b> HTML, CSS, JavaScript</li>
-      <li><b>Database:</b> MySQL (Basics)</li>
-      <li><b>Tools:</b> Git/GitHub, MS Office</li>
-    </ul>
-    <h3>Strengths:</h3>
-    <ul>
-      <li>Problem-solving and logical thinking</li>
-      <li>Teamwork and collaboration (hackathons, group projects)</li>
-      <li>Curiosity and quick learning of new tech</li>
-      <li>Strategic mindset (enhanced through chess)</li>
+      <li>Programming: C, C++, Python (basics), HTML, CSS</li>
+      <li>Problem Solving & Logical Thinking</li>
+      <li>Good Communication & Presentation Skills</li>
+      <li>Strong Teamwork & Collaboration</li>
+      <li>Extracurricular: Chess, Gym & Fitness</li>
     </ul>
   </section>
 
@@ -251,9 +160,9 @@
   <section id="achievements">
     <h2>Achievements</h2>
     <ul>
-      <li>Participated in <b>Hack-o-holic 3.0</b> with SmartCampus IoT System</li>
-      <li>Completed multiple academic projects in C</li>
-      <li>Won appreciation in <b>Accolade Chapter 3</b></li>
+      <li>Participated in Hack-o-holic 3.0 Hackathon with team project SmartCampus IoT System.</li>
+      <li>Successfully created and presented multiple technical PPTs in college courses.</li>
+      <li>Recognized for active participation in college technical and cultural activities.</li>
     </ul>
   </section>
 
@@ -261,21 +170,27 @@
   <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery">
-      <img src="gallery1.jpg" alt="Hackathon Participation" />
-      <img src="gallery2.jpg" alt="College Event" />
-      <img src="gallery3.jpg" alt="Team Work" />
+      <img src="certificate1.jpg" alt="Certificate 1">
+      <img src="certificate2.jpg" alt="Certificate 2">
+      <img src="ppt1.jpg" alt="PPT Presentation">
+      <img src="project.jpg" alt="Project Screenshot">
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:sayambahuguna@gmail.com">sayambahuguna@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340" target="_blank">Sayam Bahuguna</a></p>
+    <p>Email: <a href="mailto:sayambahujuna@gmail.com">sayambahujuna@gmail.com</a></p>
+    <p>LinkedIn: 
+      <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        Visit My LinkedIn
+      </a>
+    </p>
   </section>
 
   <footer>
-    <p>© 2025 Sayam Bahuguna</p>
+    <p>&copy; 2025 Sayam Bahuguna. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
