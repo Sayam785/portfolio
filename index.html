@@ -11,12 +11,22 @@
       padding: 0;
       background-color: #f4f4f9;
       color: #333;
+      line-height: 1.6;
     }
     header {
       background: #2c3e50;
       color: #fff;
-      padding: 20px 0;
+      padding: 25px 0;
       text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+      color: #ddd;
     }
     nav {
       display: flex;
@@ -34,26 +44,36 @@
       background: #1abc9c;
     }
     section {
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 900px;
+      padding: 25px;
+      margin: 15px auto;
+      max-width: 950px;
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     h2 {
       color: #2c3e50;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 10px;
     }
     .about-photo {
       float: left;
       margin-right: 20px;
       border-radius: 50%;
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       object-fit: cover;
+      border: 3px solid #1abc9c;
     }
     .clear {
       clear: both;
+    }
+    ul {
+      margin: 10px 0;
+      padding: 0 20px;
+    }
+    ul li {
+      margin: 8px 0;
     }
     footer {
       text-align: center;
@@ -62,31 +82,33 @@
       color: #fff;
       margin-top: 20px;
     }
-    .placeholder {
-      text-align: center;
-      padding: 40px;
-      background: #ecf0f1;
-      border: 2px dashed #bdc3c7;
-      color: #7f8c8d;
-      font-size: 14px;
+    .project-title {
+      font-weight: bold;
+      color: #1abc9c;
     }
-    ul {
-      line-height: 1.8;
+    .contact a {
+      color: #1abc9c;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Sayam Bahuguna</h1>
     <p>B.Tech CSE Student | Aspiring Developer</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#summary">Profile Summary</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#hobbies">Hobbies</a>
+    <a href="#achievements">Achievements</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -95,15 +117,14 @@
     <h2>About Me</h2>
     <img src="profile.jpg" alt="Sayam Bahuguna" class="about-photo" />
     <p>
-      I’m <b>Sayam Bahuguna</b>, currently pursuing <b>B.Tech in Computer Science and Engineering</b> 
-      at Graphic Era Hill University, Dehradun.  
-      I am passionate about <b>coding, problem-solving, and building practical projects</b>.  
-      I love learning new tools that improve my technical skills and preparing myself for real-world challenges.
+      I’m <b>Sayam Bahuguna</b>, currently pursuing <b>B.Tech in Computer Science and Engineering</b>.
+      I am passionate about <b>coding, technology, and problem-solving</b>.  
+      I enjoy learning new programming languages, exploring software tools, and working on collaborative projects.  
+      My focus areas include <b>C, C++, Python basics, and Web Development</b>.
     </p>
     <p>
-      My journey so far has included working on <b>C programming, web development, databases</b>, 
-      and <b>IoT hackathon projects</b>.  
-      These experiences have helped me build confidence, teamwork, and logical thinking skills.
+      Beyond academics, I like playing <b>chess</b>, going to the gym, and reading about new tech innovations.  
+      I believe in consistent growth and teamwork, which is why I actively take part in hackathons and technical events.
     </p>
     <div class="clear"></div>
   </section>
@@ -112,89 +133,72 @@
   <section id="summary">
     <h2>Profile Summary</h2>
     <p>
-      As a Computer Science student, I am continuously learning the foundations of programming and software development.  
-      I am building a strong base in <b>C, C++, and Python</b>, while exploring <b>HTML, CSS, and JavaScript</b> for web development.  
-      I believe in <b>learning by doing</b>, so I try to create projects that not only improve my coding skills 
-      but also have some real-world application.
-    </p>
-    <p>
-      My goal is to keep improving step by step and prepare myself for <b>internships and future career opportunities</b> in software engineering.  
-      I enjoy solving problems, whether it’s through coding challenges or developing simple projects that automate tasks.
+      I am a <b>dedicated CSE student</b> with strong interest in programming and technology.  
+      I have worked on projects in <b>C programming, IoT systems, and web development</b>.  
+      Recently, I participated in a hackathon and developed a <b>SmartCampus IoT System</b> with my team.  
+      I aim to build skills in <b>software development and AI/ML</b> in the future.
     </p>
   </section>
 
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills">
     <h2>Skills</h2>
     <ul>
       <li><b>Programming Languages:</b> C, C++ (Basics), Python (Basics)</li>
       <li><b>Web Development:</b> HTML, CSS, JavaScript</li>
       <li><b>Database:</b> MySQL (Basics)</li>
-      <li><b>Core Strengths:</b> Problem-Solving, Logical Thinking, Team Collaboration</li>
-      <li><b>Other Tools:</b> GitHub for version control</li>
+      <li><b>Problem-Solving:</b> Logic building, Debugging, DSA (Basics)</li>
+      <li><b>Teamwork:</b> Collaboration during hackathons and group projects</li>
     </ul>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <ul>
       <li>
-        <b>University Time-table Management System (C)</b>  
-        <p>A project developed in C language that automates timetable creation.  
-        Features include input validation, conflict detection, and structured display of schedules.  
-        This project improved my understanding of <b>file handling, arrays, and modular programming</b> in C.</p>
+        <span class="project-title">University Time-table Management System (C)</span>  
+        A C-based project that helps automate timetable creation. It avoids class conflicts, stores teacher/course data,  
+        and allows efficient management of schedules. Implemented using file handling and modular programming in C.
       </li>
-
       <li>
-        <b>Smart Parking System (IoT Project)</b>  
-        <p>Hackathon project where we used <b>IR sensors and microcontrollers</b> to detect empty parking slots.  
-        It displayed available slots to users and reduced confusion in parking areas.  
-        I contributed in <b>logic design and code debugging</b>.</p>
+        <span class="project-title">SmartCampus IoT System</span>  
+        Hackathon project developed with my team. Integrated IoT sensors and microcontrollers to monitor classrooms,  
+        manage energy usage, and improve campus efficiency. Focused on solving real-world college infrastructure challenges.
       </li>
-
       <li>
-        <b>Smart Classroom IoT System</b>  
-        <p>Developed during a hackathon as a team project.  
-        Features included <b>automatic attendance, light and fan control using sensors</b>, and resource monitoring.  
-        This project gave me exposure to <b>IoT concepts and teamwork</b>.</p>
+        <span class="project-title">Smart Parking System (IoT)</span>  
+        Built a prototype using IoT sensors to detect available parking spots. Displayed real-time status on a web interface,  
+        helping users find free spots quickly and reduce congestion.
       </li>
-
       <li>
-        <b>Portfolio Website</b>  
-        <p>A personal portfolio website built using <b>HTML and CSS</b>.  
-        It highlights my projects, skills, and achievements in a clean, responsive design.  
-        Through this project, I practiced <b>UI design, structuring content, and styling</b>.</p>
-      </li>
-
-      <li>
-        <b>Mini C Programs Collection</b>  
-        <p>A set of small programs written in C, such as <b>calculator, matrix operations, string handling</b>, 
-        and simple data structures like <b>stacks and queues</b>.  
-        This practice improved my problem-solving ability and logic building in programming.</p>
+        <span class="project-title">Portfolio Website</span>  
+        Designed and developed this personal portfolio using HTML & CSS.  
+        The site showcases my skills, projects, and achievements in a clean and responsive design.
       </li>
     </ul>
   </section>
 
-  <!-- Hobbies Section -->
-  <section id="hobbies">
-    <h2>Hobbies & Interests</h2>
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Achievements</h2>
     <ul>
-      <li>Coding and exploring new programming problems</li>
-      <li>Playing <b>Chess</b> – helps me improve strategy and logical thinking</li>
-      <li>Fitness and Gym – maintaining discipline and health</li>
-      <li>Learning about new technologies through articles and videos</li>
+      <li>Participated in <b>Hack-o-holic 3.0</b> with project <b>SmartCampus IoT System</b>.</li>
+      <li>Completed <b>C programming projects</b> as part of coursework.</li>
+      <li>Active member of coding practice platforms and continuously learning DSA basics.</li>
+      <li>Regular chess player – helps me improve strategic thinking and problem-solving.</li>
     </ul>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
+  <!-- Contact -->
+  <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:sayam785@gmail.com">sayam785@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/sayam785" target="_blank">github.com/sayam785</a></p>
     <p>Portfolio: <a href="https://sayam785.github.io/portfolio" target="_blank">sayam785.github.io/portfolio</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Sayam Bahuguna | Portfolio</p>
   </footer>
