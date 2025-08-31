@@ -2,133 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sayam Bahuguna - E-Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayam Bahuguna - Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
+      background-color: #f4f4f9;
       color: #333;
     }
     header {
-      background: #222;
+      background: #2c3e50;
       color: #fff;
-      padding: 1rem;
+      padding: 20px 0;
       text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #34495e;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      padding: 14px 20px;
       text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background: #1abc9c;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     h2 {
-      border-bottom: 2px solid #222;
-      display: inline-block;
-      padding-bottom: 5px;
+      color: #2c3e50;
     }
-    img, video {
-      max-width: 100%;
-      border-radius: 10px;
-      margin: 10px 0;
+    .about-photo {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    .clear {
+      clear: both;
     }
     footer {
       text-align: center;
-      background: #222;
+      padding: 15px;
+      background: #2c3e50;
       color: #fff;
-      padding: 1rem;
       margin-top: 20px;
     }
     .placeholder {
-      background: #ddd;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      border-radius: 10px;
+      text-align: center;
+      padding: 40px;
+      background: #ecf0f1;
+      border: 2px dashed #bdc3c7;
+      color: #7f8c8d;
+      font-size: 14px;
     }
-    /* About photo */
-    .about-photo {
-      float: left;
-      width: 150px;
-      height: 200px;
-      object-fit: cover;
-      margin-right: 20px;
-      border-radius: 6px;
-      border: 2px solid #333;
-    }
-    ul { list-style-type: square; margin-left: 20px; }
-
-    /* Project Cards */
-    .project {
-      background: #fff;
-      padding: 16px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .project h3 {
-      margin-top: 0;
-      color: #004080;
-    }
-    .tech {
-      margin: 8px 0 0 0;
-      font-style: italic;
-    }
-    .links {
-      margin-top: 10px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .links a {
-      text-decoration: none;
-      font-weight: 600;
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: 1px solid #004080;
-      color: #004080;
-      background: #f0f6ff;
-    }
-    .links a:hover {
-      background: #e6f0ff;
-    }
-    .clear { clear: both; }
   </style>
 </head>
 <body>
   <header>
     <h1>Sayam Bahuguna</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#video">Introduction</a>
-      <a href="#summary">Profile Summary</a>
-      <a href="#projects">Projects</a>
-      <a href="#courses">Courses & Certificates</a>
-      <a href="#skills">Skills & Strengths</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>B.Tech CSE Student | Aspiring Developer</p>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#summary">Profile Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <!-- About Section -->
   <section id="about">
@@ -144,12 +99,6 @@
     <div class="clear"></div>
   </section>
 
-  <!-- Self Introduction Video -->
-  <section id="video">
-    <h2>Self Introduction Video</h2>
-    <div class="placeholder">[Upload Your Video Here]</div>
-  </section>
-
   <!-- Profile Summary -->
   <section id="summary">
     <h2>Profile Summary</h2>
@@ -161,124 +110,38 @@
     </p>
   </section>
 
-  <!-- Projects -->
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>C, C++ (Basics), Python (Basics)</li>
+      <li>Web Development (HTML, CSS, JavaScript)</li>
+      <li>Problem-Solving & Logical Thinking</li>
+      <li>Database (MySQL Basics)</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <!-- Project 1 -->
-    <div class="project">
-      <h3>University Time Table Management System</h3>
-      <p>
-        This project is developed to <b>automate and optimize the scheduling of classes, faculty, and classrooms</b>.
-        Traditionally, timetable creation is handled manually, which is time-consuming and prone to conflicts such as overlapping classes, unavailable faculty, or overbooked classrooms. 
-        The system addresses these issues by providing a structured software solution that enhances accuracy, saves time, and simplifies management.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
-      <p><b>Key Features:</b></p>
-      <ul>
-        <li>Automatic timetable generation</li>
-        <li>Faculty and classroom allocation</li>
-        <li>Student & staff access for easy viewing and updates</li>
-      </ul>
-      <p><b>Modules Included:</b></p>
-      <ul>
-        <li>Input Module – collects faculty, classrooms, courses, and time slots</li>
-        <li>Validation Module – ensures correctness and prevents clashes</li>
-        <li>Scheduling Module – assigns courses to rooms and faculty</li>
-        <li>View Module – displays timetable in readable format</li>
-        <li>Update Module – allows modifications to existing entries</li>
-        <li>File Handling Module – manages saving/loading data</li>
-        <li>Report Generation Module – prepares daily/faculty-wise schedules</li>
-        <li>Main Control Module – manages menu navigation</li>
-      </ul>
-      <div class="links">
-        <a href="PBLPPT.pptx" target="_blank" rel="noopener noreferrer">📑 View PPT</a>
-        <a href="github-or-drive-link-1" target="_blank" rel="noopener noreferrer">🔗 GitHub/Drive Link</a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-      <h3>Parking Management System</h3>
-      <p>
-        A C-based project designed to manage parking slots efficiently. It helps users book, track, and manage
-        parking spaces, ensuring proper utilization.
-      </p>
-      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
-      <p><b>Key Features:</b></p>
-      <ul>
-        <li>Vehicle entry/exit management</li>
-        <li>Parking slot availability tracking</li>
-        <li>Billing system for parked vehicles</li>
-      </ul>
-      <div class="links">
-        <a href="SmartCampus_IoT.pptx" target="_blank" rel="noopener noreferrer">📑 View PPT</a>
-        <a href="github-or-drive-link-2" target="_blank" rel="noopener noreferrer">🔗 GitHub/Drive Link</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Courses and Certificates -->
-  <section id="courses">
-    <h2>Courses & Certificates</h2>
     <ul>
-      <li>📜 Certificate of Participation in <b>Hacktholic Event</b> for showcasing problem-solving and coding skills.</li>
-      <li>🏆 Certificate of Achievement in <b>Accolade Chapter 3</b> for active participation and technical excellence.</li>
-    </ul>
-    <div class="gallery">
-      <img src="hacktholic-certificate.jpg" alt="Hacktholic Certificate" />
-      <img src="accolade-certificate.jpg" alt="Accolade Certificate" />
-    </div>
-  </section>
-
-  <!-- Skills & Strengths -->
-  <section id="skills">
-    <h2>Skills & Strengths</h2>
-    <h3>Technical Skills:</h3>
-    <ul>
-      <li><b>Programming Languages:</b> C, C++, Python</li>
-      <li><b>Core Concepts:</b> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management</li>
-      <li><b>Development:</b> Basic Web Development (HTML, CSS, JavaScript)</li>
-      <li><b>Tools &amp; Platforms:</b> Git/GitHub, MS Office, Presentation Tools</li>
-    </ul>
-    <h3>Strengths:</h3>
-    <ul>
-      <li>Strong problem-solving and analytical thinking</li>
-      <li>Quick learner with curiosity for new technologies</li>
-      <li>Effective communication and presentation skills</li>
-      <li>Teamwork and leadership qualities, enhanced through active participation in sports like cricket and basketball</li>
-      <li>Discipline, perseverance, and adaptability in both academics and extracurriculars</li>
+      <li><b>University Time-table Management System (C)</b> – Automated timetable generation and conflict checking.</li>
+      <li><b>Smart Parking System (IoT Project)</b> – Hackathon project using sensors to manage parking spaces efficiently.</li>
+      <li><b>Smart Classroom IoT System</b> – Hackathon project that integrates IoT for better classroom management.</li>
+      <li><b>Portfolio Website</b> – Personal responsive portfolio built with HTML, CSS.</li>
     </ul>
   </section>
 
-  <!-- Achievements -->
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>[Achievement 1 – Add details here]</li>
-      <li>[Achievement 2 – Add details here]</li>
-    </ul>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="gallery1.jpg" alt="Basketball Team" />
-      <img src="gallery2.jpg" alt="Hackathon Participation" />
-      <img src="gallery3.jpg" alt="Cricket Team Celebration" />
-      <img src="gallery4.jpg" alt="College Building" />
-    </div>
-  </section>
-
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: [your email here]</p>
-    <p>LinkedIn: [your LinkedIn link]</p>
+    <p>Email: <a href="mailto:sayam785@gmail.com">sayam785@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/sayam785" target="_blank">github.com/sayam785</a></p>
+    <p>Portfolio: <a href="https://sayam785.github.io/portfolio" target="_blank">sayam785.github.io/portfolio</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Sayam Bahuguna</p>
+    <p>© 2025 Sayam Bahuguna | Portfolio</p>
   </footer>
 </body>
 </html>
