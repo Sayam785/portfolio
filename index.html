@@ -79,7 +79,8 @@
     /* 4. HEADER AND NAVIGATION */
     /* ------------------------------------------------------------------- */
     header {
-      background: var(--background-header);
+      /* Added subtle gradient for high-end feel */
+      background: linear-gradient(135deg, var(--background-header) 0%, #1e3040 100%); 
       color: #fff;
       padding: 1.5rem 1rem;
       text-align: center;
@@ -319,14 +320,20 @@
     /* ------------------------------------------------------------------- */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width for larger cards */
       gap: 25px;
       margin-top: 25px;
+      align-items: center; /* Vertically align items in the grid */
+      justify-items: center; /* Horizontally align items in the grid */
     }
     .gallery img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      /* Increased height to accommodate vertical certificates better */
+      height: 350px; 
+      /* Fix: Use 'contain' so the full image is visible, not cropped */
+      object-fit: contain; 
+      padding: 10px; /* Add padding to prevent certificates from touching the edge */
+      background: var(--background-card); /* Background for the padding area */
       border-radius: 10px;
       box-shadow: var(--card-shadow);
       transition: transform 0.3s ease-in-out;
@@ -341,6 +348,52 @@
       padding: 1.5rem;
       margin-top: 40px;
     }
+
+    /* ------------------------------------------------------------------- */
+    /* CONTACT SECTION STYLES (New UI/UX for Email) */
+    /* ------------------------------------------------------------------- */
+    .contact-form-mock {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact-input-group {
+        display: flex;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+    }
+    .contact-input-group input {
+        flex-grow: 1;
+        padding: 14px 20px;
+        border: none;
+        font-size: 1rem;
+        background: var(--background-main);
+        color: var(--text-main);
+    }
+    .contact-input-group button {
+        background: var(--secondary-blue);
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s;
+    }
+    .contact-input-group button:hover {
+        background: var(--primary-dark);
+    }
+    .contact-details p {
+        margin: 5px 0;
+        font-size: 1.1rem;
+    }
+    .contact-details b {
+        font-weight: 700;
+    }
+
 
     /* ------------------------------------------------------------------- */
     /* 10. RESPONSIVE DESIGN (MOBILE) */
@@ -371,6 +424,18 @@
         margin-top: 10px;
         justify-content: center;
       }
+      /* On mobile, stack certificates vertically for better viewing */
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .contact-input-group {
+        flex-direction: column;
+      }
+      .contact-input-group button {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
     }
   </style>
 </head>
@@ -383,7 +448,6 @@
       <h1>Sayam Bahuguna</h1>
       <nav>
         <a href="#about">About</a>
-        <a href="#video">Intro</a>
         <a href="#projects">Projects</a>
         <a href="#assignments">Assignments</a>
         <a href="#courses">Certificates</a>
@@ -413,19 +477,11 @@
     <p>My career focus is on building robust and scalable software, leveraging strong foundational knowledge in **Data Structures, Algorithms, and Object-Oriented Programming (OOP)**, complemented by practical development experience in C, C++, and web technologies.</p>
     <div class="clear"></div>
   </section>
-  
-  <!-- Self Introduction Video (Assignment 2)
-  <section id="video">
-    <h2>Self Introduction Video (Assignment No. 2)</h2>
-    <div class="placeholder">
-        <p>Dedicated placeholder for **Assignment No 2**: Your Self-Introduction Video.</p>
-        <p>Please update the `self-intro-video-link` in the Assignments section with the video URL.</p>
-    </div>
-  </section> -->
   <!-- MANDATORY ASSIGNMENTS SECTION -->
   <section id="assignments">
-    <h2> ASSIGNMENTS</h2>
-    <p>
+    <h2> Assignments</h2>
+    <p>This section is crucial for assessment. **Please update the placeholder links below with your actual Google Drive or video URLs.**</p>
+
     <!-- Assignment 1: SWOC Matrix and Recorded Video -->
     <div class="project">
       <h3>Assignment No. 1: SWOC Matrix and Recorded Video</h3>
@@ -478,8 +534,7 @@
     </div>
   </section>
   <!-- END ASSIGNMENTS SECTION -->
-
-
+  
   <!-- Projects -->
   <section id="projects">
     <h2>Technical Projects</h2>
@@ -542,6 +597,7 @@
   </section>
 
   
+
   <!-- Courses and Certificates -->
   <section id="courses">
     <h2>Courses & Certificates</h2>
@@ -597,18 +653,38 @@
       <li>**Team Lead/Contributor in Smart India Hackathon (SIH 2025)** proposal development.</li>
       <li>**Technical Contributor to Hack-o-holic 3.0** with the SmartCampus IoT system.</li>
       <li>**Recognized for technical excellence** in Accolade Chapter 3 (Code Hunt).</li>
-      
+    
     </ul>
   </section>
 
- 
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <!-- Updated placeholders for a high-end, tech-focused look -->
+      <img src="gallery1.jpg" alt="Sports Activity" onerror="this.onerror=null;this.src='https://placehold.co/400x350/002D62/f0f8ff?text=Code+Review+Session';" />
+      <img src="gallery2.jpg" alt="Hackathon Participation" onerror="this.onerror=null;this.src='https://placehold.co/400x350/0077B6/f0f8ff?text=Hackathon+Pitch';" />
+      <img src="gallery3.jpg" alt="Team Photo" onerror="this.onerror=null;this.src='https://placehold.co/400x350/002D62/f0f8ff?text=Project+Team+Launch';" />
+      <img src="gallery4.jpg" alt="College Campus" onerror="this.onerror=null;this.src='https://placehold.co/400x350/0077B6/f0f8ff?text=Software+Architecture+Diagram';" />
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
     <div class="project">
-        <p>Email: <b>[sayambahujuna@gmail.com]</b></p>
-        <p>LinkedIn: <b>[https://www.linkedin.com/in/sayam-bahuguna-a56a87340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app]</b></p>
+        <div class="contact-details">
+            <p>Email: <b>sayambahujuna@gmail.com</b></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><b>Sayam Bahuguna LinkedIn Profile</b></a></p>
+        </div>
+        
+        <p style="margin-top: 20px; font-weight: 600;">Want to connect? Send me a quick message:</p>
+        <div class="contact-form-mock">
+            <div class="contact-input-group">
+                <input type="email" placeholder="Enter your email address">
+                <button>Connect</button>
+            </div>
+        </div>
     </div>
   </section>
 
@@ -618,7 +694,7 @@
 
   <script>
     // ------------------------------------------------------------------- 
-    // JAVASCRIPT FOR HIGH-END INTERACTIVITY (Approx 350 lines)
+    // JAVASCRIPT FOR HIGH-END INTERACTIVITY 
     // ------------------------------------------------------------------- 
     
     document.addEventListener('DOMContentLoaded', () => {
@@ -663,10 +739,33 @@
                 bar.style.width = level;
             }, 100);
         });
+        
+        // 4. Contact Form Mock (Visual Feedback)
+        document.querySelector('.contact-input-group button').addEventListener('click', function() {
+            const input = this.previousElementSibling;
+            if (input.value && input.value.includes('@')) {
+                // Mock success
+                this.textContent = 'Sent! ✅';
+                this.style.backgroundColor = '#4CAF50';
+                input.value = '';
+                setTimeout(() => {
+                    this.textContent = 'Connect';
+                    this.style.backgroundColor = 'var(--secondary-blue)';
+                }, 2000);
+            } else {
+                 // Mock error
+                this.textContent = 'Invalid Email ❌';
+                this.style.backgroundColor = '#f44336';
+                setTimeout(() => {
+                    this.textContent = 'Connect';
+                    this.style.backgroundColor = 'var(--secondary-blue)';
+                }, 1500);
+            }
+        });
     });
 
     // ------------------------------------------------------------------- 
-    // 4. PARTICLE BACKGROUND LOGIC (Canvas)
+    // 5. PARTICLE BACKGROUND LOGIC (Canvas)
     // ------------------------------------------------------------------- 
     const canvas = document.getElementById('particle-canvas');
     const ctx = canvas.getContext('2d');
@@ -791,4 +890,3 @@
   </script>
 </body>
 </html>
-
