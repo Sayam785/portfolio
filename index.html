@@ -4,371 +4,357 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sayam Bahuguna - E-Portfolio</title>
-
-  <!-- ===============  STYLES  =============== -->
   <style>
-    :root{
-      --ink:#1f2a44;
-      --brand:#0a59ff;
-      --brand-2:#0e8fff;
-      --bg:#f7f9fc;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --ring:#e6ecff;
-      --green:#0ea866;
-      --shadow:0 6px 20px rgba(10, 89, 255, .08);
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
     }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #004080; /* Updated color for better theme matching */
+      display: inline-block;
+      padding-bottom: 5px;
+      color: #004080;
+    }
+    h3 {
+      color: #004080; /* Consistent color for subheadings */
+    }
+    img, video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 20px;
+    }
+    .placeholder {
+      background: #e6f0ff; /* Lighter background for assignments/videos */
+      border: 1px dashed #004080;
+      padding: 20px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #004080;
+      border-radius: 10px;
+      text-align: center;
+      font-style: italic;
+    }
+    /* About photo */
+    .about-photo {
+      float: left;
+      width: 150px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 20px;
+      border-radius: 6px;
+      border: 2px solid #333;
+    }
+    ul { list-style-type: square; margin-left: 20px; }
 
-    *{box-sizing:border-box}
-    html,body{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-      color:var(--ink);
-      background:var(--bg);
-      line-height:1.65;
+    /* Project Cards */
+    .project {
+      background: #fff;
+      padding: 16px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
+    .project h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+    .tech {
+      margin: 8px 0 0 0;
+      font-style: italic;
+    }
+    .links {
+      margin-top: 10px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .links a {
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #004080;
+      color: #004080;
+      background: #f0f6ff;
+      transition: background 0.3s;
+    }
+    .links a:hover {
+      background: #004080;
+      color: #fff;
+    }
+    .clear { clear: both; }
 
-    /* Header / Navbar */
-    header{
-      background:linear-gradient(90deg, var(--brand), var(--brand-2));
-      color:#fff;
-      padding:28px 16px 10px;
-      position:sticky;
-      top:0;
-      z-index:50;
-      box-shadow:0 4px 20px rgba(0,0,0,.1);
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .about-photo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
     }
-    .wrap{
-      max-width:1060px;
-      margin:auto;
-      padding:0 12px;
-    }
-    .topbar{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      flex-wrap:wrap;
-      justify-content:space-between;
-    }
-    .id{
-      display:flex;
-      align-items:center;
-      gap:14px;
-    }
-    .avatar{
-      width:64px;height:64px;border-radius:50%;
-      object-fit:cover;border:3px solid #fff;
-      box-shadow:0 4px 12px rgba(0,0,0,.15);
-    }
-    .name h1{
-      font-size:1.55rem;
-      margin:0 0 2px 0;
-      letter-spacing:.3px;
-    }
-    .name p{
-      margin:0;color:#e7eeff;font-weight:500
-    }
-
-    nav{
-      display:flex; gap:14px; flex-wrap:wrap; margin-top:10px;
-    }
-    nav a{
-      color:#fff; text-decoration:none; font-weight:600;
-      padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.25);
-      transition:.2s;
-    }
-    nav a:hover{background:#ffffff22}
-
-    /* Sections */
-    section{padding:38px 0;}
-    h2.section-title{
-      margin:0 0 18px 0;
-      font-size:1.6rem;
-      border-left:6px solid var(--brand);
-      padding-left:12px;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid #eef2ff;
-      border-radius:16px;
-      padding:18px;
-      box-shadow:var(--shadow);
-    }
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .col-12{grid-column:span 12}
-    .col-6{grid-column:span 6}
-    .col-4{grid-column:span 4}
-    .col-3{grid-column:span 3}
-    @media (max-width:900px){
-      .col-6{grid-column:span 12}
-      .col-4{grid-column:span 6}
-      .col-3{grid-column:span 6}
-    }
-    @media (max-width:560px){
-      .col-4,.col-3{grid-column:span 12}
-    }
-
-    /* About block */
-    .about{
-      display:grid;
-      grid-template-columns:140px 1fr;
-      gap:18px;
-      align-items:start;
-    }
-    .about .photo{
-      width:140px; height:180px; border-radius:12px; object-fit:cover;
-      border:2px solid var(--ring); box-shadow:0 8px 22px rgba(31,42,68,.15);
-    }
-    .taglist{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .tag{font-size:.85rem;padding:6px 10px;border-radius:999px;background:#eef4ff;color:#21408a;border:1px solid #dfe7ff}
-
-    /* Project cards */
-    .project{display:flex;flex-direction:column;gap:10px;border-left:5px solid var(--brand)}
-    .project h3{margin:0}
-    .meta{color:var(--muted);font-size:.92rem}
-    .pill{display:inline-block;font-size:.82rem;padding:4px 10px;border-radius:999px;background:#f1f5ff;border:1px solid #e2e8ff;color:#23408a;margin-right:6px}
-    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-    .btn{text-decoration:none;font-weight:700;font-size:.92rem;padding:8px 12px;border-radius:10px;border:1px solid var(--brand);color:var(--brand);background:#fff;transition:.2s}
-    .btn.fill{background:var(--brand);color:#fff}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(10,89,255,.2)}
-
-    /* Media tiles (certificates/gallery) */
-    .thumb{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid #e6ecff;box-shadow:0 8px 18px rgba(31,42,68,.06);transition:.25s}
-    .thumb:hover{transform:scale(1.015)}
-    figure{margin:0}
-    figcaption{font-size:.9rem;color:var(--muted);margin-top:6px;text-align:center}
-
-    /* Definition lists */
-    dl{display:grid;grid-template-columns:160px 1fr;gap:10px 16px}
-    dt{color:var(--muted)}
-    dd{margin:0}
-
-    /* Footer */
-    footer{margin-top:30px;padding:28px 14px;text-align:center;color:var(--muted)}
-    .contact a{color:var(--brand);text-decoration:none;font-weight:700}
-    .contact a:hover{text-decoration:underline}
-
-    .muted{color:var(--muted)}
-    .spacer{height:10px}
   </style>
 </head>
-
 <body>
-
-  <!-- =================  HEADER  ================= -->
   <header>
-    <div class="wrap">
-      <div class="topbar">
-        <div class="id">
-          <img class="avatar" src="profile.jpg" alt="Sayam Bahuguna profile photo">
-          <div class="name">
-            <h1>Sayam Bahuguna</h1>
-            <p>B.Tech CSE • Portfolio & Project Showcase</p>
-          </div>
-        </div>
-
-        <nav aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#summary">Profile Summary</a>
-          <a href="#projects">Projects</a>
-          <a href="#certs">Certificates</a>
-          <a href="#ppts">Presentations</a>
-          <a href="#skills">Skills</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </div>
+    <h1>Sayam Bahuguna</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#video">Introduction</a>
+      <a href="#summary">Profile Summary</a>
+      <a href="#projects">Projects</a>
+      <a href="#assignments">Assignments</a> <!-- NEW LINK -->
+      <a href="#courses">Courses & Certificates</a>
+      <a href="#skills">Skills & Strengths</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- =================  ABOUT  ================= -->
+  <!-- About Section -->
   <section id="about">
-    <div class="wrap">
-      <h2 class="section-title">About Me</h2>
+    <h2>About Me</h2>
+    <img src="profile.jpg" alt="Sayam Bahuguna" class="about-photo" />
+    <p>
+      I’m <b>Sayam Bahuguna</b>, currently pursuing <b>B.Tech in Computer Science and Engineering</b>.
+      I am passionate about coding, technology, and learning new tools that improve problem-solving.
+      I have been working on projects related to <b>web development, C programming, and databases</b>,
+      and I am excited to keep building my portfolio. In the future, I aim to specialize in <b>AI/ML</b>
+      and contribute to impactful tech solutions.
+    </p>
+    <div class="clear"></div>
+  </section>
 
-      <div class="card about">
-        <img class="photo" src="profile.jpg" alt="Portrait of Sayam Bahuguna">
-        <div>
-          <p>
-            I’m <strong>Sayam Bahuguna</strong>, a Computer Science & Engineering undergrad who enjoys
-            building simple, useful software and documenting work clearly. This portfolio collects my
-            project work, certificates, and presentation decks in one place. I like keeping things
-            minimal, readable, and honest—no fluff.
-          </p>
-          <p class="muted">
-            Interests: problem-solving with C/C++, learning Python basics, and building web pages with
-            HTML/CSS. I also enjoy chess—it keeps the brain sharp.
-          </p>
-          <div class="taglist" aria-label="Interests and tools">
-            <span class="tag">C</span>
-            <span class="tag">C++</span>
-            <span class="tag">Python (basics)</span>
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Git/GitHub</span>
-            <span class="tag">PPT Documentation</span>
-          </div>
-          <div class="spacer"></div>
-          <dl>
-            <dt>Based in</dt><dd>Dehradun, Uttarakhand, India</dd>
-            <dt>Focus areas</dt><dd>Data Structures, basic DB/file handling, and clean documentation</dd>
-            <dt>Looking towards</dt><dd>Solid CS fundamentals, then AI/ML foundations later on</dd>
-          </dl>
-        </div>
-      </div>
+  <!-- Self Introduction Video -->
+  <section id="video">
+    <h2>Self Introduction Video</h2>
+    <div class="placeholder">
+        <p>This section is for **Assignment No 2** / Your Self-Introduction Video.</p>
+        <p>Please upload your video here when ready.</p>
     </div>
   </section>
 
-  <!-- =================  PROFILE SUMMARY  ================= -->
+  <!-- Profile Summary -->
   <section id="summary">
-    <div class="wrap">
-      <h2 class="section-title">Profile Summary</h2>
-      <div class="card">
-        <ul>
-          <li>B.Tech CSE student with a growing interest in software development and clear technical communication.</li>
-          <li>Comfortable with <strong>C</strong> (file handling, modular programs) and learning <strong>C++</strong> &amp; <strong>Python</strong> basics.</li>
-          <li>Enjoys building console utilities and small web pages—then writing simple docs and slides.</li>
-          <li>Projects so far center on scheduling/timetables and basic management systems.</li>
-          <li>Team-friendly, punctual, and organized; likes using GitHub for versioning and sharing work.</li>
-        </ul>
-      </div>
-    </div>
+    <h2>Profile Summary</h2>
+    <p>
+      I am a <b>CSE student</b> with a growing interest in coding, software development, and new technologies.
+      Currently learning <b>C, C++, and Python</b>, while also exploring <b>web development</b>.
+      I enjoy working on projects that enhance my practical knowledge and prepare me for a career in
+      <b>software engineering</b>.
+    </p>
   </section>
 
-  <!-- =================  PROJECTS  ================= -->
+  <!-- Projects -->
   <section id="projects">
-    <div class="wrap">
-      <h2 class="section-title">Projects</h2>
-      <div class="grid">
-        <div class="col-12">
-          <article class="card project">
-            <h3>University Timetable Management (C)</h3>
-            <p class="meta">Console program • C, File Handling</p>
-            <p>
-              A straightforward C program that helps generate and view class timetables. It stores inputs
-              (courses, faculty, rooms, time slots) in files, checks for basic clashes, and prints readable
-              views (day-wise or faculty-wise). The focus was on clear menus, input validation, and keeping
-              the code modular.
-            </p>
-            <div class="links">
-              <a class="btn fill" href="PBLPPT.pptx" download>Download PPT (PBLPPT.pptx)</a>
-            </div>
-          </article>
-        </div>
-        <div class="col-12">
-          <article class="card project">
-            <h3>Parking Management (C)</h3>
-            <p class="meta">Console program • C, File Handling</p>
-            <p>
-              A file-based project to manage parking slots. It notes vehicle entry/exit, tracks free
-              slots, and prints bills based on duration. Built to practice record storage and retrieval
-              with file streams and keep the code easy to navigate.
-            </p>
-            <div class="links">
-              <a class="btn fill" href="SmartCampus_IoT.pptx" download>Download PPT (SmartCampus_IoT.pptx)</a>
-            </div>
-          </article>
-        </div>
+    <h2>Projects</h2>
+    <!-- Project 1 -->
+    <div class="project">
+      <h3>University Time Table Management System</h3>
+      <p>
+        This project is developed to <b>automate and optimize the scheduling of classes, faculty, and classrooms</b>.
+        Traditionally, timetable creation is handled manually, which is time-consuming and prone to conflicts such as overlapping classes, unavailable faculty, or overbooked classrooms.
+        The system addresses these issues by providing a structured software solution that enhances accuracy, saves time, and simplifies management.
+      </p>
+      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
+      <p><b>Key Features:</b></p>
+      <ul>
+        <li>Automatic timetable generation</li>
+        <li>Faculty and classroom allocation</li>
+        <li>Student & staff access for easy viewing and updates</li>
+      </ul>
+      <p><b>Modules Included:</b></p>
+      <ul>
+        <li>Input Module – collects faculty, classrooms, courses, and time slots</li>
+        <li>Validation Module – ensures correctness and prevents clashes</li>
+        <li>Scheduling Module – assigns courses to rooms and faculty</li>
+        <li>View Module – displays timetable in readable format</li>
+        <li>Update Module – allows modifications to existing entries</li>
+        <li>File Handling Module – manages saving/loading data</li>
+        <li>Report Generation Module – prepares daily/faculty-wise schedules</li>
+        <li>Main Control Module – manages menu navigation</li>
+      </ul>
+      <div class="links">
+        <a href="PBLPPT.pptx" target="_blank" rel="noopener noreferrer">📑 View PPT</a>
+        <a href="github-or-drive-link-1" target="_blank" rel="noopener noreferrer">🔗 GitHub/Drive Link</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <h3>Parking Management System</h3>
+      <p>
+        A C-based project designed to manage parking slots efficiently. It helps users book, track, and manage
+        parking spaces, ensuring proper utilization.
+      </p>
+      <p class="tech"><b>Technologies Used:</b> C Programming, File Handling</p>
+      <p><b>Key Features:</b></p>
+      <ul>
+        <li>Vehicle entry/exit management</li>
+        <li>Parking slot availability tracking</li>
+        <li>Billing system for parked vehicles</li>
+      </ul>
+      <div class="links">
+        <a href="SmartCampus_IoT.pptx" target="_blank" rel="noopener noreferrer">📑 View PPT</a>
+        <a href="github-or-drive-link-2" target="_blank" rel="noopener noreferrer">🔗 GitHub/Drive Link</a>
       </div>
     </div>
   </section>
 
-  <!-- =================  CERTIFICATES  ================= -->
-  <section id="certs">
-    <div class="wrap">
-      <h2 class="section-title">Courses & Certificates</h2>
-      <div class="grid">
-        <div class="col-6">
-          <figure class="card">
-            <a href="accolade-certificate.jpg" target="_blank"><img class="thumb" src="accolade-certificate.jpg" alt="Accolade Certificate"></a>
-            <figcaption>Accolade certificate — participation & recognition.</figcaption>
-          </figure>
-        </div>
-        <div class="col-6">
-          <figure class="card">
-            <a href="hacktholic-certificate.jpg" target="_blank"><img class="thumb" src="hacktholic-certificate.jpg" alt="Hacktholic Certificate"></a>
-            <figcaption>Hacktholic participation — teamwork and problem solving.</figcaption>
-          </figure>
-        </div>
+  <!-- NEW ASSIGNMENTS SECTION -->
+  <section id="assignments">
+    <h2>Mandatory Assignments</h2>
+    <p>This section documents the required communication and presentation assignments.</p>
+
+    <!-- Assignment 1: SWOC Matrix and Recorded Video -->
+    <div class="project">
+      <h3>Assignment No. 1: SWOC Matrix and Recorded Video</h3>
+      <p>This assignment consists of a **Strength, Weakness, Opportunity, and Challenge (SWOC) Matrix** and an accompanying recorded video.</p>
+      <p class="tech"><b>Format:</b> Document and Video</p>
+      <div class="links">
+        <a href="swoc-document-link" target="_blank" rel="noopener noreferrer">📑 View SWOC Matrix Document</a>
+        <a href="swoc-video-link" target="_blank" rel="noopener noreferrer">▶️ View Recorded Video</a>
+      </div>
+    </div>
+
+    <!-- Assignment 3: Recorded Presentation -->
+    <div class="project">
+      <h3>Assignment No. 3: Recorded Presentation (4-6 min)</h3>
+      <p>A recorded presentation (4-6 minutes) on one of the presentation topics discussed in class.</p>
+      <p class="tech"><b>Format:</b> Recorded Video Presentation</p>
+      <div class="links">
+        <a href="presentation-video-link" target="_blank" rel="noopener noreferrer">▶️ View Presentation Video</a>
+      </div>
+    </div>
+
+    <!-- Assignment 4: Jam Speech -->
+    <div class="project">
+      <h3>Assignment No. 4: Just-A-Minute (JAM) Speech</h3>
+      <p>A Jam speech on any topic of choice, testing spontaneity and fluency.</p>
+      <p class="tech"><b>Format:</b> Recorded Video</p>
+      <div class="links">
+        <a href="jam-speech-video-link" target="_blank" rel="noopener noreferrer">▶️ View JAM Speech Video</a>
+      </div>
+    </div>
+
+    <!-- Assignment 5: Group Role Play -->
+    <div class="project">
+      <h3>Assignment No. 5: Group Role Play on Art of Conversation</h3>
+      <p>A group role-play demonstrating the art of effective conversation based on allocated topics and themes.</p>
+      <p class="tech"><b>Format:</b> Group Role-Play Video</p>
+      <div class="links">
+        <a href="role-play-video-link" target="_blank" rel="noopener noreferrer">▶️ View Role Play Video</a>
       </div>
     </div>
   </section>
+  <!-- END NEW ASSIGNMENTS SECTION -->
 
-  <!-- =================  PRESENTATIONS (PPTs)  ================= -->
-  <section id="ppts">
-    <div class="wrap">
-      <h2 class="section-title">Project Presentations (PPT)</h2>
-      <div class="grid">
-        <div class="col-6">
-          <div class="card">
-            <h3>PBL Timetable Deck</h3>
-            <p class="muted">Slides summarizing modules and outputs.</p>
-            <div class="links">
-              <a class="btn fill" href="PBLPPT.pptx" download>Download</a>
-              <a class="btn" href="PBLPPT.pptx" target="_blank">Open</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <h3>SmartCampus IoT Deck</h3>
-            <p class="muted">Slides covering idea and modules.</p>
-            <div class="links">
-              <a class="btn fill" href="SmartCampus_IoT.pptx" download>Download</a>
-              <a class="btn" href="SmartCampus_IoT.pptx" target="_blank">Open</a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Courses and Certificates -->
+  <section id="courses">
+    <h2>Courses & Certificates</h2>
+    <ul>
+      <li>📜 Certificate of Participation in <b>Hacktholic Event</b> for showcasing problem-solving and coding skills.</li>
+      <li>🏆 Certificate of Achievement in <b>Accolade Chapter 3</b> for active participation and technical excellence.</li>
+    </ul>
+    <div class="gallery">
+      <img src="hacktholic-certificate.jpg" alt="Hacktholic Certificate" />
+      <img src="accolade-certificate.jpg" alt="Accolade Certificate" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e6f0ff/004080?text=Accolade+Certificate';"/>
     </div>
   </section>
 
-  <!-- =================  SKILLS  ================= -->
+  <!-- Skills & Strengths -->
   <section id="skills">
-    <div class="wrap">
-      <h2 class="section-title">Skills & Strengths</h2>
-      <div class="card">
-        <ul>
-          <li><strong>Programming:</strong> C (file I/O), C++ basics, Python basics</li>
-          <li><strong>Concepts:</strong> Data structures (arrays, lists, stacks/queues)</li>
-          <li><strong>Web:</strong> HTML & CSS static pages</li>
-          <li><strong>Tools:</strong> Git/GitHub, VS Code, PowerPoint</li>
-          <li><strong>Strengths:</strong> teamwork, communication, punctuality</li>
-        </ul>
-      </div>
-    </div>
+    <h2>Skills & Strengths</h2>
+    <h3>Technical Skills:</h3>
+    <ul>
+      <li><b>Programming Languages:</b> C, C++, Python</li>
+      <li><b>Core Concepts:</b> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management</li>
+      <li><b>Development:</b> Basic Web Development (HTML, CSS, JavaScript)</li>
+      <li><b>Tools &amp; Platforms:</b> Git/GitHub, MS Office, Presentation Tools</li>
+    </ul>
+    <h3>Strengths:</h3>
+    <ul>
+      <li>Strong problem-solving and analytical thinking</li>
+      <li>Quick learner with curiosity for new technologies</li>
+      <li>Effective communication and presentation skills</li>
+      <li>Teamwork and leadership qualities, enhanced through active participation in sports like cricket and basketball</li>
+      <li>Discipline, perseverance, and adaptability in both academics and extracurriculars</li>
+    </ul>
   </section>
 
-  <!-- =================  ACHIEVEMENTS  ================= -->
+  <!-- Achievements -->
   <section id="achievements">
-    <div class="wrap">
-      <h2 class="section-title">Achievements</h2>
-      <div class="card">
-        <ul>
-          <li>Built two C projects with file handling (Timetable, Parking).</li>
-          <li>Presented structured PPTs for evaluation.</li>
-          <li>Participated in Hacktholic hackathon, practiced teamwork.</li>
-        </ul>
-      </div>
+    <h2>Achievements</h2>
+    <ul>
+      <li>[Achievement 1 – Add details here]</li>
+      <li>[Achievement 2 – Add details here]</li>
+    </ul>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="gallery1.jpg" alt="Basketball Team" onerror="this.onerror=null;this.src='https://placehold.co/400x300/dddddd/666666?text=Gallery+Image+1';" />
+      <img src="gallery2.jpg" alt="Hackathon Participation" onerror="this.onerror=null;this.src='https://placehold.co/400x300/dddddd/666666?text=Gallery+Image+2';" />
+      <img src="gallery3.jpg" alt="Cricket Team Celebration" onerror="this.onerror=null;this.src='https://placehold.co/400x300/dddddd/666666?text=Gallery+Image+3';" />
+      <img src="gallery4.jpg" alt="College Building" onerror="this.onerror=null;this.src='https://placehold.co/400x300/dddddd/666666?text=Gallery+Image+4';" />
     </div>
   </section>
 
-  <!-- =================  CONTACT  ================= -->
+  <!-- Contact -->
   <section id="contact">
-    <div class="wrap">
-      <h2 class="section-title">Contact</h2>
-      <div class="card contact">
-        <p>Email: <a href="mailto:sayambahujuna@gmail.com">sayambahujuna@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sayam-bahuguna-a56a87340" target="_blank">Sayam Bahuguna</a></p>
-      </div>
-    </div>
+    <h2>Contact</h2>
+    <p>Email: [your email here]</p>
+    <p>LinkedIn: [your LinkedIn link]</p>
   </section>
 
-  <!-- =================  FOOTER  ================= -->
   <footer>
     <p>© 2025 Sayam Bahuguna</p>
   </footer>
-
 </body>
 </html>
